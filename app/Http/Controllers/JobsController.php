@@ -14,8 +14,8 @@ class JobsController extends Controller
      */
     public function index()
     {
-        $da = Jobs::all();
-        return view('')->with('', $ta);
+        $data = Jobs::all();
+        return view('jobs.index')->with('jobs', $data);
     }
 
     /**
@@ -25,7 +25,7 @@ class JobsController extends Controller
      */
     public function create()
     {
-        return view('');
+        return view('jobs.create');
     }
 
     /**
@@ -65,8 +65,8 @@ class JobsController extends Controller
      */
     public function edit($id)
     {
-        $da = Jobs::where('id_jobs', '=', $id)->firstOrFail();
-        return view('')->with('', $ta);
+        $data = Jobs::where('id_jobs', '=', $id)->firstOrFail();
+        return view('jobs.edit')->with('jobs', $data);
     }
 
     /**
@@ -97,6 +97,6 @@ class JobsController extends Controller
     public function destroy($id)
     {
         Jobs::where('id_jobs',$id)->delete();
-        return redirect('job');
+        return redirect('jobs');
     }
 }

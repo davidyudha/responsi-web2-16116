@@ -13,13 +13,19 @@ class CreateEmployeesTable extends Migration
      */
     public function up()
     {
-        Schema::create('', function (Blueprint $table) {
+        Schema::create('employees', function (Blueprint $table) {
             // $table->('id_employees'); big integer AUTO INCREMENT
+            $this->bigIncrements('id_employees');
             // $table->('id_jobs')->unsigned(); big integer
+            $table->bigInteger('id_jobs')->unsigned();
             // $table->('name'); string
+            $table->string('name');
             // $table->('email'); string
+            $table->string('email');
             // $table->('phone'); string
+            $table->string('phone');
             // $table->('address'); string
+            $table->string('address');
             $table->timestamps();
 
             $table->foreign('id_jobs')->references('id_jobs')->on('jobs');

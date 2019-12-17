@@ -81,14 +81,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
+                    <h1>David Yudha Wibantara</h1>
+                </div>
+                <div class="title m-b-md">
                     <!-- Isikan dengan username akun github anda -->
-                    <h1>davidyudha</h1>
+                    <h1>NIM : 18/432180/SV/16116</h1>
                 </div>
 
-                <div class="links">
-                    <!-- ganti url dengan link github anda -->
-                    <a href="https://github.com/davidyudha/responsi-web2-16116.git">GitHub</a>
-                </div>
+                
             </div>
         </div>
     </body>
