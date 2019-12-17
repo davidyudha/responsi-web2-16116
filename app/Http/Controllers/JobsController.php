@@ -37,10 +37,10 @@ class JobsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama'=>'required',
+            'name'=>'required',
         ]);
         $jobs = new Jobs([
-            'nama' => $request->input('nama')
+            'name' => $request->input('name')
         ]);
         $jobs->save();
         return redirect('jobs');
@@ -79,10 +79,10 @@ class JobsController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama'=>'required',
+            'name'=>'required',
         ]);
         $data = [
-            'nama' => $request->nama,
+            'name' => $request->name,
         ];
         Jobs::where('id_jobs',$id)->update($data);
         return redirect('jobs');

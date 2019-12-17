@@ -17,7 +17,7 @@ class CreateJobsTable extends Migration
             // $table->('id_jobs'); big integer AUTO INCREMENT
             $table->bigIncrements('id_jobs');
             // $table->('name'); string
-            $table->string('nama');
+            $table->String('name');
             $table->timestamps();
         });
     }
